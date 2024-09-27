@@ -15,6 +15,8 @@ search_input.addEventListener(
 	function(event) {
 		if (
 			event.key !== 'Enter'
+
+			// Option-Enter triggers non-Algolia backend search.
 			|| (event.altKey && event.key === 'Enter')
 		) {
 			return;
