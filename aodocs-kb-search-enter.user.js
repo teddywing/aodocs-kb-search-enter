@@ -6,6 +6,8 @@
 // @match https://support.aodocs.com/*
 // ==/UserScript==
 
+var SCRIPT_NAME = 'AODocs KB Search Enter';
+
 var search_input = document.getElementById('query');
 
 search_input.addEventListener(
@@ -34,11 +36,11 @@ function go_to_highlighted_article () {
 	// Check content of search drop-down:
 	// console.log(algolia_autocomplete_dropdown.innerHTML);
 
-	var highlighted_autocompletion = algolia_autocomplete_dropdown.querySelectorAll(
+	var highlighted_autocompletion = algolia_autocomplete_dropdown.querySelector(
 		'.aa-suggestion[aria-selected="true"]'
 	);
 
-	console.log('###', highlighted_autocompletion);
+	console.info(SCRIPT_NAME, 'Selected completion', highlighted_autocompletion);
 
 	highlighted_autocompletion.click();
 
