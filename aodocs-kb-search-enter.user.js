@@ -33,9 +33,6 @@ function go_to_highlighted_article () {
 		'.algolia-autocomplete .aa-dataset-articles'
 	);
 
-	// Check content of search drop-down:
-	// console.log(algolia_autocomplete_dropdown.innerHTML);
-
 	var highlighted_autocompletion = algolia_autocomplete_dropdown.querySelector(
 		'.aa-suggestion[aria-selected="true"]'
 	);
@@ -43,6 +40,4 @@ function go_to_highlighted_article () {
 	console.info(SCRIPT_NAME, 'Selected completion', highlighted_autocompletion);
 
 	highlighted_autocompletion.click();
-
-	// window.location.replace('');
 }
