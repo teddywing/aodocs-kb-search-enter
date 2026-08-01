@@ -37,6 +37,11 @@ search_input.addEventListener(
 			return;
 		}
 
+		// Continue to search results if no autocompletion is selected.
+		if (!is_autocompletion_highlighted()) {
+			return;
+		}
+
 		event.stopPropagation();
 		event.stopImmediatePropagation();
 		event.preventDefault();
@@ -45,7 +50,11 @@ search_input.addEventListener(
 	}
 );
 
-function go_to_highlighted_article () {
+function is_autocompletion_highlighted () {
+	return get_highlighted_autocompletion() !== null;
+}
+
+function get_highlighted_autocompletion () {
 	var algolia_autocomplete_dropdown = document.querySelector(
 		'.algolia-autocomplete .aa-dataset-articles'
 	);
@@ -53,6 +62,12 @@ function go_to_highlighted_article () {
 	var highlighted_autocompletion = algolia_autocomplete_dropdown.querySelector(
 		'.aa-suggestion[aria-selected="true"]'
 	);
+
+	return highlighted_autocompletion;
+}
+
+function go_to_highlighted_article () {
+	highlighted_autocompletion = get_highlighted_autocompletion();
 
 	console.info(SCRIPT_NAME, 'Selected completion', highlighted_autocompletion);
 
