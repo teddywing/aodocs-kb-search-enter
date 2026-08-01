@@ -1,0 +1,13 @@
+CHANGELOG
+=========
+
+v0.0.2 (2026-08-02):
+	Changes:
+
+	* When <Enter> is pressed while no autocompletion is selected, redirect to
+	  search results.
+
+v0.0.1 (2026-08-02):
+	First release.
+
+ vim:tw=80:comments=:fo+=n:formatlistpat=^\\s*\\*\\s*

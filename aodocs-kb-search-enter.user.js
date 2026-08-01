@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name AODocs KB Search Enter
 // @description Fix <Enter> key in AODocs Knowledge Base search field autocompletion
-// @version 0.0.1
+// @version 0.0.2
 // @namespace com.teddywing
 // @match https://support.aodocs.com/*
 // ==/UserScript==
 
-// Copyright (c) 2024  Teddy Wing
+// Copyright (c) 2024, 2026  Teddy Wing
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
